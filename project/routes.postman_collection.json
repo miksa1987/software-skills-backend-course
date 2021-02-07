@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "34988767-88d1-45a0-becd-c5064a0b9997",
+		"name": "BMV2 API important routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Random workout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"goal\": \"strength\",\n    \"type\": [\"bodyweight\"],\n    \"level\": \"hard\",\n    \"equipment\": [\"bar\",\"rings\"],\n    \"group\": 3,\n    \"groupsNum\": 1,\n    \"exercisesPerGroup\": 4,\n    \"time\": 1800\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/workout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"workout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create multiple exercises",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"exercises\": [\n        {\n            \"name\": \"exercise 1\",\n            \"type\": \"strength\",\n            \"equipment\": [\"bar\",\"none\",\"rings\",\"barbell\",\"dumbbell\",    \"kettlebell\"],\n            \"isometric\": false,\n            \"level\": \"sensei\",\n            \"unilateral\": true,\n            \"okForHigherReps\": false,\n            \"isSkill\": false,\n            \"mainGroup\": 0,\n            \"isCompound\": true,\n            \"timeToDoRep\": 2,\n            \"maxHoldTime\": 0,\n            \"created\": \"2021-02-07\"\n        },\n        {\n            \"name\": \"exercise 2\",\n            \"type\": \"muscle\",\n            \"equipment\": [\"bar\",\"none\",\"rings\",\"barbell\",\"dumbbell\",    \"kettlebell\"],\n            \"isometric\": false,\n            \"level\": \"sensei\",\n            \"unilateral\": true,\n            \"okForHigherReps\": false,\n            \"isSkill\": false,\n            \"mainGroup\": 0,\n            \"isCompound\": true,\n            \"timeToDoRep\": 2,\n            \"maxHoldTime\": 0,\n            \"created\": \"2021-02-07\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/exercises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"exercises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create exercise group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"muscle group 1\",\n        \"number\": 0,\n        \"previousGroup\": 6,\n        \"nextGroup\": 1\n    },\n    {\n        \"name\": \"muscle group 2\",\n        \"number\": 1,\n        \"previousGroup\": 0,\n        \"nextGroup\": 2\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/exercisegroups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"exercisegroups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all exercises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/exercises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"exercises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all exercise groups",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}

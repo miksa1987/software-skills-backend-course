@@ -1,0 +1,44 @@
+[16.1.2021]
+Started this course bravely enough by sketching some skeleton for my project, I have a cunning plan in mind. It's going to be an API for an app idea I've been bouncing around in my mind, a random workout generator.
+
+[17.1.2021]
+I watched the REST API concepts video. It wasn't really new things to me as I've been doing stuff with APIs for work and for fun for a while and been exposed more or less to REST principles.
+
+[18.1.2021]
+Watched the Node crash course. I haven't really used that much Node.js inbuilt modules except for some fs, other than that they're pretty new to me. Might come in handy some time. Node's own http module I did know, but hadn't used before because Express. I did write a little HTTP server along the video, it was kinda fun to do at a bit lower level than Express. I think it helps to understand Express and other frameworks better. Nodemon and Heroku were familiar from before.
+
+[19.1.2021]
+Did MongoDB schemes for the API with mongoose. I wanted to use mongoose since the data will be pretty consistent and mongoose makes the validation easy. Also did a route for adding exercises. There will be data!
+
+[20.1.2021]
+Added a bunch of data to Mongo through the endpoint I did yesterday. Thank god I did an endpoint that accepts multiple exercises at once...
+
+[21.1.2021]
+As probably can be seen above, I've been using Mongo before too, by MongoDB Atlas with mongoose. Although, I've never before installed mongo on my own machine, now I finally did it and got to play around with mongo shell as shown in the MongoDB crash course video. Very interesting. Now I can manipulate data via command line shell in addition to the clunky GUI of Atlas or Compass. Mongo language is pretty easy to pick up since I know JavaScript pretty well and work in TypeScript. Although Mongo operators I know not that well, I always end up googling them... Indexes were new too. I've had a hazy idea of what it is, but since I'm no db expert (yet) I haven't given it too much thought.
+
+[26.1.2021]
+Did a logic for generating random workouts, in addition to a function to search exercises by given parameters.
+
+[28.1.2021]
+Fighting with the random generator logic. There's an infinite loop somewhere.
+
+[30.1.2021]
+No more infinite loop with too little data! Tweaking the generation parameters so that the response is somewhat sane. More filtering for exercises.
+
+[31.1.2021]
+More tweaking for the random generation logic. Now the infinite loop is really gone once and for all. Did have to enter a bunch of data to exercises to make the responses about sane. Now I'm almost satisfied with the workouts that I get. There's more filtering for the exercises by given conditions and there's been some cleanup in the code. I watched the Express video finally. There wasn't all that much new except Handlebars, which seems like a nice templating engine, although I'm probably not going to use it since I'm doing SPAs, usually with React. I watched the REST API video as well while I was on the mood. Nice speedcoding, it was fun to watch.
+
+[2.2.2021]
+More cleanup on the code of the project API.
+
+[3.2.2021]
+Still more cleanup and some refactoring.
+
+[4.2.2021]
+Even more cleanups! I think this starts to be ready in the scope of the course... I'll continue developing this on my free time.
+
+[5.2.2021]
+Write a README
+
+[7.2.2021]
+Rewrite the README, do example requests to a Postman collection and final touches to the code. I think this is it.

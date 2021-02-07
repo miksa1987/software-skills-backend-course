@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
+    "types": ["node", "jest"],
+    "esModuleInterop": true,
+    "target": "es6",
+    "strict": true,
+    "sourceMap": true,
+    "rootDir": "src",
+    "outDir": "build",
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "paths": { "*": ["./types"] }
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
